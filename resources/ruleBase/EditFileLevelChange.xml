@@ -1,0 +1,1692 @@
+<InterRuleBase>
+	<EditFileLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule1">
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule2">
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule3">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule4">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule5">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule6">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule7">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule8">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule9">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule10">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule11">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule12">
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule13">
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule14">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule15">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule16">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule17">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule18">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule19">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule20">
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule21">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule22">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule23">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule24">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule25">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule26">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule27">
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule28">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule29">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule30">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule31">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule32">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule33">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule34">
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule35">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule36">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule37">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule38">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule39">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule40">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule41">
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule42">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule43">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule44">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule45">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule46">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule47">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<DeleteArtefactElementLevelChangeRule id="rule48">
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</DeleteArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule49">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule50">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule51">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule52">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule53">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule54">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule55">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule56">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule57">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule58">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule59">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule60">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule61">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule62">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule63">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule64">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule65">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule66">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule67">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule68">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule69">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule70">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule71">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule72">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule73">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule74">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule75">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule76">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule77">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule78">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule79">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule80">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule81">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule82">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule83">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule84">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule85">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule86">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule87">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule88">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule89">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule90">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule91">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule92">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule93">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule94">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule95">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule96">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule97">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule98">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule99">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule100">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule101">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule102">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule103">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule104">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule105">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule106">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule107">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule108">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule109">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule110">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule111">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule112">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule113">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule114">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule115">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule116">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule117">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST </ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule118">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule119">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule120">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule121">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule122">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule123">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule124">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule125">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>SEQUENCE_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule126">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule127">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>REQUIREMENT_SPECIFICATION</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<EditArtefactElementLevelChangeRule id="rule128">
+			<FineGrainedChangeType>NA</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>MODULE_VIEW_ARCHITECTURE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>USE_CASE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ConnectedEntity>
+			<InterLinkType>Satisfaction</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditArtefactElementLevelChangeRule>
+		<AddArtefactElementLevelChangeRule id="rule129">
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ParentsConnection>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ParentsConnection>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</AddArtefactElementLevelChangeRule>
+		<AddArtefactElementLevelChangeRule id="rule130">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ParentsConnection>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ParentsConnection>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</AddArtefactElementLevelChangeRule>
+		<AddArtefactElementLevelChangeRule id="rule131">
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ParentsConnection>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ParentsConnection>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</AddArtefactElementLevelChangeRule>
+		<AddArtefactElementLevelChangeRule id="rule132">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ParentsConnection>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ParentsConnection>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</AddArtefactElementLevelChangeRule>
+		<AddArtefactElementLevelChangeRule id="rule133">
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ParentsConnection>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ParentsConnection>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</AddArtefactElementLevelChangeRule>
+		<AddArtefactElementLevelChangeRule id="rule134">
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ParentsConnection>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ParentsConnection>
+			<InterLinkType>Identity</InterLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</AddArtefactElementLevelChangeRule>
+	</EditFileLevelChangeRule>
+</InterRuleBase>

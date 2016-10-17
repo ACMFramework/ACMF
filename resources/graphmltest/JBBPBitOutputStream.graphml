@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml>
+<key attr.name="name" attr.type="string" for="node" id="d0"/>
+<key attr.name="visibility" attr.type="string" for="node" id="d1"/>
+<key attr.name="variableType" attr.type="string" for="node" id="d2"/>
+<key attr.name="content" attr.type="string" for="node" id="d3"/>
+<key attr.name="parameters" attr.type="string" for="node" id="d4"/>
+<key attr.name="returnType" attr.type="string" for="node" id="d5"/>
+<key attr.name="type" attr.type="string" for="node" id="d6"/>
+<key attr.name="relType" attr.type="string" for="edge" id="d7"/>
+<key attr.name="uniqueId" attr.type="string" for="node" id="d8"/>
+<key attr.name="implementsOrExtends" attr.type="string" for="node" id="d9"/>
+<graph edgedefault="undirected" id="SC">
+<node id="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">JBBPBitOutputStream</data>
+<data key="d1">public</data>
+<data key="d6">class</data>
+<data key="d8">sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+<data key="d9">JBBPCountableBitStreamFilterOutputStream</data>
+</node>
+<node id="sc1C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">bitBuffer</data>
+<data key="d1">private</data>
+<data key="d2">int</data>
+<data key="d6">Field</data>
+<data key="d8">sc1C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc2C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">bitBufferCount</data>
+<data key="d1">private</data>
+<data key="d2">int</data>
+<data key="d6">Field</data>
+<data key="d8">sc2C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">byteCounter</data>
+<data key="d1">private</data>
+<data key="d2">long</data>
+<data key="d6">Field</data>
+<data key="d8">sc3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">msb0</data>
+<data key="d1">private</data>
+<data key="d2">boolean</data>
+<data key="d6">Field</data>
+<data key="d8">sc4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">JBBPBitOutputStream</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this(out, JBBPBitOrder.LSB0);
+  }</data>
+<data key="d4"/>
+<data key="d5"/>
+<data key="d6">Method</data>
+<data key="d8">sc5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">JBBPBitOutputStream</data>
+<data key="d1">public</data>
+<data key="d3">{
+    super(out);
+    this.msb0 = order == JBBPBitOrder.MSB0;
+  }</data>
+<data key="d4"/>
+<data key="d5"/>
+<data key="d6">Method</data>
+<data key="d8">sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc7C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">getBitOrder</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.msb0 ? JBBPBitOrder.MSB0 : JBBPBitOrder.LSB0;
+  }</data>
+<data key="d5">JBBPBitOrder</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc7C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc8C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">writeShort</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (byteOrder == JBBPByteOrder.BIG_ENDIAN) {
+      this.write(value &gt;&gt;&gt; 8);
+      this.write(value);
+    }
+    else {
+      this.write(value);
+      this.write(value &gt;&gt;&gt; 8);
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc8C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc9C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">writeInt</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (byteOrder == JBBPByteOrder.BIG_ENDIAN) {
+      this.writeShort(value &gt;&gt;&gt; 16, byteOrder);
+      this.writeShort(value, byteOrder);
+    }
+    else {
+      this.writeShort(value, byteOrder);
+      this.writeShort(value &gt;&gt;&gt; 16, byteOrder);
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc9C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">writeLong</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (byteOrder == JBBPByteOrder.BIG_ENDIAN) {
+      this.writeInt((int) (value &gt;&gt;&gt; 32), byteOrder);
+      this.writeInt((int) value, byteOrder);
+    }
+    else {
+      this.writeInt((int) value, byteOrder);
+      this.writeInt((int) (value &gt;&gt;&gt; 32), byteOrder);
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc11C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">getCounter</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.byteCounter;
+  }</data>
+<data key="d5">long</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc11C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc12C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">getBitBuffer</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.bitBuffer;
+  }</data>
+<data key="d5">int</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc12C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc13C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">getBufferedBitsNumber</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.bitBufferCount;
+  }</data>
+<data key="d5">int</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc13C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc14C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">flushBitBuffer</data>
+<data key="d1">private</data>
+<data key="d3">{
+    if (this.bitBufferCount &gt; 0) {
+      this.bitBufferCount = 0;
+      writeByte(this.bitBuffer);
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc14C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc15C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">flush</data>
+<data key="d1">public</data>
+<data key="d3">{
+    flushBitBuffer();
+    this.out.flush();
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc15C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc16C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">write</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (this.bitBufferCount == 0) {
+      out.write(b, off, len);
+      this.byteCounter += len;
+    }
+    else {
+      int i = off;
+      int cnt = len;
+      while (cnt &gt; 0) {
+        this.write((int) b[i++]);
+        cnt--;
+      }
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc16C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc17C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">write</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this.write(b, 0, b.length);
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc17C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc18C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">writeBits</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (this.bitBufferCount == 0 &amp;&amp; bitNumber == JBBPBitNumber.BITS_8) {
+      write(value);
+    }
+    else {
+      final int initialMask;
+      int mask;
+      initialMask = 1;
+      mask = initialMask &lt;&lt; this.bitBufferCount;
+
+      int accum = value;
+      int i = bitNumber.getBitNumber();
+
+      while (i &gt; 0) {
+        this.bitBuffer = this.bitBuffer | ((accum &amp; 1) == 0 ? 0 : mask);
+        accum &gt;&gt;= 1;
+
+        mask = mask &lt;&lt; 1;
+
+        i--;
+        this.bitBufferCount++;
+        if (this.bitBufferCount == 8) {
+          this.bitBufferCount = 0;
+          writeByte(this.bitBuffer);
+          mask = initialMask;
+          this.bitBuffer = 0;
+        }
+      }
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc18C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc19C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">align</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (this.bitBufferCount &gt; 0) {
+      this.writeBits(0, JBBPBitNumber.decode(8 - this.bitBufferCount));
+    }
+    
+    if (alignByteNumber&gt;0){
+      long padding = (alignByteNumber - (this.byteCounter % alignByteNumber)) % alignByteNumber;
+      while(padding&gt;0){
+        this.out.write(0);
+        this.byteCounter++;
+        padding--;
+      }
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc19C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc20C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">writeByte</data>
+<data key="d1">private</data>
+<data key="d3">{
+    if (this.msb0){
+      value = JBBPUtils.reverseBitsInByte((byte)value) &amp; 0xFF;
+    }
+    this.out.write(value);
+    this.byteCounter++;
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc20C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc21C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">close</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this.flush();
+    this.out.close();
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc21C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc22C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">write</data>
+<data key="d1">public</data>
+<data key="d3">{
+    if (this.bitBufferCount == 0) {
+      writeByte(value);
+    }
+    else {
+      writeBits(value, JBBPBitNumber.BITS_8);
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc22C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<node id="sc23C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d0">resetCounter</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this.bitBuffer = 0;
+    this.bitBufferCount = 0;
+    this.byteCounter = 0L;
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc23C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</data>
+</node>
+<edge id="Intra_Link0" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc1C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link1" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc2C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link2" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link3" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link4" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link5" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link6" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc7C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link7" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc8C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link8" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc9C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link9" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link10" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc11C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link11" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc12C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link12" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc13C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link13" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc14C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link14" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc15C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link15" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc16C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link16" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc17C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link17" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc18C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link18" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc19C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link19" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc20C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link20" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc21C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link21" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc22C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link22" source="sc0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml" target="sc23C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+</graph>
+</graphml>

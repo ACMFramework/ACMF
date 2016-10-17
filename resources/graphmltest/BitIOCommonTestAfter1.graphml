@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml>
+<key attr.name="name" attr.type="string" for="node" id="d0"/>
+<key attr.name="visibility" attr.type="string" for="node" id="d1"/>
+<key attr.name="variableType" attr.type="string" for="node" id="d2"/>
+<key attr.name="content" attr.type="string" for="node" id="d3"/>
+<key attr.name="parameters" attr.type="string" for="node" id="d4"/>
+<key attr.name="returnType" attr.type="string" for="node" id="d5"/>
+<key attr.name="type" attr.type="string" for="node" id="d6"/>
+<key attr.name="relType" attr.type="string" for="edge" id="d7"/>
+<key attr.name="uniqueId" attr.type="string" for="node" id="d8"/>
+<key attr.name="implementsOrExtends" attr.type="string" for="node" id="d9"/>
+<graph edgedefault="undirected" id="SC">
+<node id="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d0">BitIOCommonTest</data>
+<data key="d1">public</data>
+<data key="d6">class</data>
+<data key="d8">ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</data>
+<data key="d9"/>
+</node>
+<node id="ut1C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d0">rnd</data>
+<data key="d1">private</data>
+<data key="d2">Random</data>
+<data key="d6">Field</data>
+<data key="d8">ut1C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</data>
+</node>
+<node id="ut2C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d0">BYTE_MASK</data>
+<data key="d1">private</data>
+<data key="d2">int</data>
+<data key="d6">Field</data>
+<data key="d8">ut2C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</data>
+</node>
+<node id="ut4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d0">testWriteRead_MSB0</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final int LEN = 10000;
+
+    final byte[] array = new byte[LEN];
+    final int[] len = new int[LEN];
+
+    rnd.nextBytes(array);
+    for (int i = 0; i &lt; LEN; i++) {
+      final int l = rnd.nextInt(8) + 1;
+      len[i] = l;
+      array[i] = (byte) (array[i] &amp; BYTE_MASK[l]);
+    }
+
+    final ByteArrayOutputStream buff = new ByteArrayOutputStream();
+
+    final JBBPBitOutputStream out = new JBBPBitOutputStream(buff, JBBPBitOrder.MSB0);
+
+    int writtenBits = 0;
+    for (int i = 0; i &lt; LEN; i++) {
+      writtenBits += len[i];
+      out.writeBits(array[i], JBBPBitNumber.decode(len[i]));
+    }
+
+    out.close();
+
+    final JBBPBitInputStream in = new JBBPBitInputStream(new ByteArrayInputStream(buff.toByteArray()), JBBPBitOrder.MSB0);
+    for (int i = 0; i &lt; LEN; i++) {
+      assertEquals("Index i=" + i, array[i] &amp; 0xFF, in.readBits(JBBPBitNumber.decode(len[i])));
+    }
+
+    if (writtenBits % 8 == 0) {
+      assertEquals(-1, in.read());
+    }
+    else {
+      assertEquals(0, in.read());
+      assertEquals(-1, in.read());
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">ut4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</data>
+</node>
+<node id="ut5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d0">testWriteRead_NotFullByteAsLSB0AndReadAsMSB0</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+    
+    final JBBPBitOutputStream out = new JBBPBitOutputStream(buffer, JBBPBitOrder.LSB0);
+    out.writeBits(1, JBBPBitNumber.BITS_1);
+    out.writeBits(0, JBBPBitNumber.BITS_1);
+    out.writeBits(1, JBBPBitNumber.BITS_1);
+    out.writeBits(1, JBBPBitNumber.BITS_1);
+    out.writeBits(0, JBBPBitNumber.BITS_1);
+    out.flush();
+    
+    final JBBPBitInputStream in = new JBBPBitInputStream(new ByteArrayInputStream(buffer.toByteArray()),JBBPBitOrder.MSB0);
+    assertEquals(0, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(0, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(0, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(0, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(1, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(1, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(0, in.readBits(JBBPBitNumber.BITS_1));
+    assertEquals(1, in.readBits(JBBPBitNumber.BITS_1));
+    
+    assertEquals(-1, in.readBits(JBBPBitNumber.BITS_1));
+  
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">ut5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</data>
+</node>
+<node id="ut6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d0">testWriteRead_LSB0</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final int LEN = 10000;
+
+    final byte[] array = new byte[LEN];
+    final int[] len = new int[LEN];
+
+    rnd.nextBytes(array);
+    for (int i = 0; i &lt; LEN; i++) {
+      final int l = rnd.nextInt(8) + 1;
+      len[i] = l;
+      array[i] = (byte) (array[i] &amp; BYTE_MASK[l]);
+    }
+
+    final ByteArrayOutputStream buff = new ByteArrayOutputStream();
+
+    final JBBPBitOutputStream out = new JBBPBitOutputStream(buff, JBBPBitOrder.LSB0);
+
+    int writtenBits = 0;
+
+    for (int i = 0; i &lt; LEN; i++) {
+      writtenBits += len[i];
+      out.writeBits(array[i], JBBPBitNumber.decode(len[i]));
+    }
+
+    out.close();
+
+    final JBBPBitInputStream in = new JBBPBitInputStream(new ByteArrayInputStream(buff.toByteArray()), JBBPBitOrder.LSB0);
+    for (int i = 0; i &lt; LEN; i++) {
+      assertEquals("Index i=" + i, array[i] &amp; 0xFF, in.readBits(JBBPBitNumber.decode(len[i])));
+    }
+
+    if (writtenBits % 8 == 0) {
+      assertEquals(-1, in.read());
+    }
+    else {
+      assertEquals(0, in.read());
+      assertEquals(-1, in.read());
+    }
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">ut6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</data>
+</node>
+<edge id="Intra_Link0" source="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml" target="ut1C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link1" source="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml" target="ut2C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link2" source="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml" target="ut3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link3" source="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml" target="ut4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link4" source="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml" target="ut5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link5" source="ut0C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml" target="ut6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+</graph>
+</graphml>

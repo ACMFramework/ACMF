@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml>
+<key attr.name="name" attr.type="string" for="node" id="d0"/>
+<key attr.name="visibility" attr.type="string" for="node" id="d1"/>
+<key attr.name="variableType" attr.type="string" for="node" id="d2"/>
+<key attr.name="content" attr.type="string" for="node" id="d3"/>
+<key attr.name="parameters" attr.type="string" for="node" id="d4"/>
+<key attr.name="returnType" attr.type="string" for="node" id="d5"/>
+<key attr.name="type" attr.type="string" for="node" id="d6"/>
+<key attr.name="relType" attr.type="string" for="edge" id="d7"/>
+<key attr.name="uniqueId" attr.type="string" for="node" id="d8"/>
+<key attr.name="implementsOrExtends" attr.type="string" for="node" id="d9"/>
+<graph edgedefault="undirected" id="SC">
+<node id="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">JBBPNamedNumericFieldMap</data>
+<data key="d1">public</data>
+<data key="d6">class</data>
+<data key="d8">sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+<data key="d9">JBBPFieldFinder</data>
+</node>
+<node id="sc1C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">fieldMap</data>
+<data key="d1">private</data>
+<data key="d2">Map&lt;JBBPNamedFieldInfo, JBBPNumericField&gt;</data>
+<data key="d6">Field</data>
+<data key="d8">sc1C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc2C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">externalValueProvider</data>
+<data key="d1">private</data>
+<data key="d2">JBBPExternalValueProvider</data>
+<data key="d6">Field</data>
+<data key="d8">sc2C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc3C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">JBBPNamedNumericFieldMap</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this(null);
+  }</data>
+<data key="d4"/>
+<data key="d5"/>
+<data key="d6">Method</data>
+<data key="d8">sc3C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc4C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">JBBPNamedNumericFieldMap</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this.fieldMap = new LinkedHashMap&lt;JBBPNamedFieldInfo, JBBPNumericField&gt;();
+    this.externalValueProvider = externalValueProvider;
+  }</data>
+<data key="d4"/>
+<data key="d5"/>
+<data key="d6">Method</data>
+<data key="d8">sc4C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc5C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">getExternalValueProvider</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.externalValueProvider;
+  }</data>
+<data key="d5">JBBPExternalValueProvider</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc5C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc6C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">get</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.fieldMap.get(namedField);
+  }</data>
+<data key="d5">JBBPNumericField</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc6C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc7C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">putField</data>
+<data key="d1">public</data>
+<data key="d3">{
+    JBBPUtils.assertNotNull(field, "Field must not be null");
+    final JBBPNamedFieldInfo fieldName = field.getNameInfo();
+    JBBPUtils.assertNotNull(fieldName, "Field name info must not be null");
+    this.fieldMap.put(fieldName, field);
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc7C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc8C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">remove</data>
+<data key="d1">public</data>
+<data key="d3">{
+    JBBPUtils.assertNotNull(nameInfo, "Name info must not be null");
+    return this.fieldMap.remove(nameInfo);
+  }</data>
+<data key="d5">JBBPNumericField</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc8C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc9C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findForFieldOffset</data>
+<data key="d1">public</data>
+<data key="d3">{
+    JBBPNumericField result = null;
+    for (final Map.Entry&lt;JBBPNamedFieldInfo, JBBPNumericField&gt; f : fieldMap.entrySet()) {
+      if (f.getKey().getFieldOffsetInCompiledBlock() == offset) {
+        result = f.getValue();
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">JBBPNumericField</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc9C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc10C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findFirstFieldForType</data>
+<data key="d1">public</data>
+<data key="d3">{
+    JBBPUtils.assertNotNull(fieldType, "Type must not be null");
+    T result = null;
+    for (final JBBPNumericField f : fieldMap.values()) {
+      if (fieldType.isAssignableFrom(f.getClass())) {
+        result = fieldType.cast(f);
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">T</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc10C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc11C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findLastFieldForType</data>
+<data key="d1">public</data>
+<data key="d3">{
+    JBBPUtils.assertNotNull(fieldType, "Type must not be null");
+    T result = null;
+    for (final JBBPNumericField f : fieldMap.values()) {
+      if (fieldType == f.getClass()) {
+        result = fieldType.cast(f);
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">T</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc11C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc12C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findFieldForType</data>
+<data key="d1">public</data>
+<data key="d3">{
+    JBBPUtils.assertNotNull(fieldType, "Type must not be null");
+    int count = 0;
+    T result = null;
+    for (final JBBPNumericField f : fieldMap.values()) {
+      if (fieldType == f.getClass()) {
+        result = fieldType.cast(f);
+        count++;
+      }
+    }
+    if (count &gt; 1) {
+      throw new JBBPTooManyFieldsFoundException(count, "Too many fields detected", null, fieldType);
+    }
+    return result;
+  }</data>
+<data key="d5">T</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc12C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc13C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findFieldForNameAndType</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedName = JBBPUtils.normalizeFieldNameOrPath(fieldName);
+    JBBPUtils.assertNotNull(fieldType, "Field type must not be null");
+
+    T result = null;
+
+    for (final Map.Entry&lt;JBBPNamedFieldInfo, JBBPNumericField&gt; f : fieldMap.entrySet()) {
+      if (normalizedName.equals(f.getKey().getFieldName()) &amp;&amp; fieldType.isAssignableFrom(f.getValue().getClass())) {
+        result = fieldType.cast(f.getValue());
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">T</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc13C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc14C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findFieldForPathAndType</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedPath = JBBPUtils.normalizeFieldNameOrPath(fieldPath);
+    JBBPUtils.assertNotNull(fieldType, "Field type must not be null");
+
+    T result = null;
+
+    for (final Map.Entry&lt;JBBPNamedFieldInfo, JBBPNumericField&gt; f : fieldMap.entrySet()) {
+      if (normalizedPath.equals(f.getKey().getFieldPath()) &amp;&amp; fieldType.isAssignableFrom(f.getValue().getClass())) {
+        result = fieldType.cast(f.getValue());
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">T</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc14C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc15C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findFieldForName</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedName = JBBPUtils.normalizeFieldNameOrPath(fieldName);
+
+    JBBPAbstractField result = null;
+
+    for (final Map.Entry&lt;JBBPNamedFieldInfo, JBBPNumericField&gt; f : fieldMap.entrySet()) {
+      if (normalizedName.equals(f.getKey().getFieldName())) {
+        result = (JBBPAbstractField) f.getValue();
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">JBBPAbstractField</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc15C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc16C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">findFieldForPath</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedPath = JBBPUtils.normalizeFieldNameOrPath(fieldPath);
+
+    JBBPAbstractField result = null;
+
+    for (final Map.Entry&lt;JBBPNamedFieldInfo, JBBPNumericField&gt; f : fieldMap.entrySet()) {
+      if (normalizedPath.equals(f.getKey().getFieldPath())) {
+        result = (JBBPAbstractField) f.getValue();
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">JBBPAbstractField</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc16C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc17C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">nameExists</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedName = JBBPUtils.normalizeFieldNameOrPath(fieldName);
+
+    boolean result = false;
+
+    for (final JBBPNamedFieldInfo f : fieldMap.keySet()) {
+      if (normalizedName.equals(f.getFieldName())) {
+        result = true;
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">boolean</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc17C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc18C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">pathExists</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedPath = JBBPUtils.normalizeFieldNameOrPath(fieldPath);
+
+    boolean result = false;
+
+    for (final JBBPNamedFieldInfo f : fieldMap.keySet()) {
+      if (normalizedPath.equals(f.getFieldPath())) {
+        result = true;
+        break;
+      }
+    }
+    return result;
+  }</data>
+<data key="d5">boolean</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc18C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc19C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">clear</data>
+<data key="d1">public</data>
+<data key="d3">{
+    this.fieldMap.clear();
+  }</data>
+<data key="d5">void</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc19C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc20C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">isEmpty</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.fieldMap.isEmpty();
+  }</data>
+<data key="d5">boolean</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc20C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc21C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">size</data>
+<data key="d1">public</data>
+<data key="d3">{
+    return this.fieldMap.size();
+  }</data>
+<data key="d5">int</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc21C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<node id="sc22C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d0">getExternalFieldValue</data>
+<data key="d1">public</data>
+<data key="d3">{
+    final String normalizedName = JBBPUtils.normalizeFieldNameOrPath(externalFieldName);
+    if (this.externalValueProvider == null) {
+      throw new JBBPEvalException("Request for '" + externalFieldName + "' but there is not any value provider", evaluator);
+    }
+    else {
+      return this.externalValueProvider.provideArraySize(normalizedName, this, compiledBlock);
+    }
+  }</data>
+<data key="d5">int</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc22C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml</data>
+</node>
+<edge id="Intra_Link0" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc1C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link1" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc2C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link2" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc3C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link3" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc4C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link4" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc5C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link5" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc6C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link6" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc7C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link7" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc8C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link8" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc9C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link9" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc10C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link10" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc11C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link11" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc12C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link12" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc13C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link13" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc14C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link14" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc15C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link15" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc16C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link16" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc17C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link17" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc18C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link18" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc19C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link19" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc20C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link20" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc21C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+<edge id="Intra_Link21" source="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml" target="sc22C:\Users\Ildi\Dropbox\PhD\ACMF\JBBPNamedNumericFieldMap.graphml">
+<data key="d7">Parent_Child</data>
+</edge>
+</graph>
+</graphml>

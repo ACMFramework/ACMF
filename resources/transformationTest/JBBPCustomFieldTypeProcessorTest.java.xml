@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" language="Java" filename="JBBPCustomFieldTypeProcessorTest.java"><comment type="block">/*
+ * Copyright 2015 Igor Maznitsa.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */</comment>
+<package>package <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>;</package>
+
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>compiler</name>.<name>JBBPNamedFieldInfo</name>;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>compiler</name>.<name>tokenizer</name>.<name>JBBPFieldTypeParameterContainer</name>;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>io</name>.*;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>model</name>.*;</import>
+<import>import <name>java</name>.<name>io</name>.<name>IOException</name>;</import>
+<import>import <name>java</name>.<name>util</name>.<name>concurrent</name>.<name>atomic</name>.<name>AtomicInteger</name>;</import>
+<import>import <name>org</name>.<name>junit</name>.<name>Test</name>;</import>
+<import>import static <name>org</name>.<name>junit</name>.<name>Assert</name>.*;</import>
+
+<class><specifier>public</specifier> class <name>JBBPCustomFieldTypeProcessorTest</name> <block>{
+
+  @<function><type><name>Test</name>
+  <specifier>public</specifier> <name>void</name></type> <name>testFieldsWithCustomNames</name><parameter_list>()</parameter_list> <throws>throws <argument><expr><name>Exception</name></expr></argument></throws> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>AtomicInteger</name></type> <name>callCounter</name> =<init> <expr>new <call><name>AtomicInteger</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPCustomFieldTypeProcessor</name></type> <name>testProcessor</name> =<init> <expr>new <class><super><name>JBBPCustomFieldTypeProcessor</name></super><argument_list>()</argument_list> <block>{
+      <decl_stmt><decl><type><specifier>private</specifier> <specifier>final</specifier> <name>String</name><index>[]</index></type> <name>types</name> =<init> <expr>new <name><name>String</name><index>[]</index></name><block>{<expr>"some1"</expr>, <expr>"some2"</expr>, <expr>"some3"</expr>}</block></expr></init></decl>;</decl_stmt>
+
+      <function><type><specifier>public</specifier> <name>String</name><index>[]</index></type> <name>getCustomFieldTypes</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>.<name>types</name></expr>;</return>
+      }</block></function>
+
+      <function><type><specifier>public</specifier> <name>boolean</name></type> <name>isAllowed</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPFieldTypeParameterContainer</name></type> <name>fieldType</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldName</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>extraData</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>boolean</name></type> <name>isArray</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name><name>callCounter</name>.<name>incrementAndGet</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+
+        <expr_stmt><expr><call><name>assertNotNull</name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>type</name> =<init> <expr><call><name><name>fieldType</name>.<name>getTypeName</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some1"</expr></argument>)</argument_list></call> || <call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some2"</expr></argument>)</argument_list></call> || <call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some3"</expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <if>if <condition>(<expr><call><name><name>fieldName</name>.<name>equals</name></name><argument_list>(<argument><expr>"b"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"some1"</expr></argument>, <argument><expr><name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name><name>fieldName</name>.<name>equals</name></name><argument_list>(<argument><expr>"c"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"some2"</expr></argument>, <argument><expr><name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name><name>fieldName</name>.<name>equals</name></name><argument_list>(<argument><expr>"e"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"some3"</expr></argument>, <argument><expr><name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some3"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><name>isArray</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+          <expr_stmt><expr><call><name>assertFalse</name><argument_list>(<argument><expr><name>isArray</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></else></if>
+
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some2"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>345</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></else></if>
+
+        <return>return <expr><name>true</name></expr>;</return>
+      }</block></function>
+
+      <function><type><specifier>public</specifier> <name>JBBPAbstractField</name></type> <name>readCustomFieldType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPBitInputStream</name></type> <name>in</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPBitOrder</name></type> <name>bitOrder</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>parserFlags</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPFieldTypeParameterContainer</name></type> <name>customFieldTypeInfo</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>fieldName</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>extraData</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>boolean</name></type> <name>readWholeStream</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>arrayLength</name></decl></param>)</parameter_list> <throws>throws <argument><expr><name>IOException</name></expr></argument></throws> <block>{
+        <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>type</name> =<init> <expr><call><name><name>customFieldTypeInfo</name>.<name>getTypeName</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><name>JBBPBitOrder</name>.<name>LSB0</name></expr></argument>, <argument><expr><name>bitOrder</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><name>JBBPParser</name>.<name>FLAG_SKIP_REMAINING_FIELDS_IF_EOF</name></expr></argument>, <argument><expr><name>parserFlags</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some1"</expr></argument>)</argument_list></call> ? <name>JBBPByteOrder</name>.<name>LITTLE_ENDIAN</name> : <name>JBBPByteOrder</name>.<name>BIG_ENDIAN</name></expr></argument>, <argument><expr><call><name><name>customFieldTypeInfo</name>.<name>getByteOrder</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some1"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"b"</expr></argument>, <argument><expr><call><name><name>fieldName</name>.<name>getFieldName</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertFalse</name><argument_list>(<argument><expr><name>readWholeStream</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>-1</expr></argument>, <argument><expr><name>arrayLength</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr>new <call><name>JBBPFieldByte</name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr>(<name>byte</name>) <call><name><name>in</name>.<name>readByte</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then>
+        <else>else <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some2"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>345</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"c"</expr></argument>, <argument><expr><call><name><name>fieldName</name>.<name>getFieldName</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertFalse</name><argument_list>(<argument><expr><name>readWholeStream</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>-1</expr></argument>, <argument><expr><name>arrayLength</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr>new <call><name>JBBPFieldShort</name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr>(<name>short</name>) <call><name><name>in</name>.<name>readUnsignedShort</name></name><argument_list>(<argument><expr><call><name><name>customFieldTypeInfo</name>.<name>getByteOrder</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then>
+        <else>else <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some3"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"e"</expr></argument>, <argument><expr><call><name><name>fieldName</name>.<name>getFieldName</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertFalse</name><argument_list>(<argument><expr><name>readWholeStream</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>5</expr></argument>, <argument><expr><name>arrayLength</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr>new <call><name>JBBPFieldArrayByte</name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr><call><name><name>in</name>.<name>readByteArray</name></name><argument_list>(<argument><expr><name>arrayLength</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+          <expr_stmt><expr><call><name>fail</name><argument_list>(<argument><expr>"Unexpected " + <name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr><name>null</name></expr>;</return>
+        }</block></else></if></else></if></else></if>
+      }</block></function>
+    }</block></class></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPParser</name></type> <name>parser</name> =<init> <expr><call><name><name>JBBPParser</name>.<name>prepare</name></name><argument_list>(<argument><expr>"int a; &lt;some1 b; some2:345 c; long d; some3 [5] e;"</expr></argument>, <argument><expr><name>JBBPBitOrder</name>.<name>LSB0</name></expr></argument>, <argument><expr><name>testProcessor</name></expr></argument>, <argument><expr><name>JBBPParser</name>.<name>FLAG_SKIP_REMAINING_FIELDS_IF_EOF</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>3</expr></argument>, <argument><expr><call><name><name>callCounter</name>.<name>get</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPFieldStruct</name></type> <name>parsed</name> =<init> <expr><call><name><name>parser</name>.<name>parse</name></name><argument_list>(<argument><expr>new <name><name>byte</name><index>[]</index></name><block>{
+      <expr>(<name>byte</name>) 0x12</expr>, <expr>(<name>byte</name>) 0x34</expr>, <expr>(<name>byte</name>) 0x56</expr>, <expr>(<name>byte</name>) 0x78</expr>,
+      <expr>(<name>byte</name>) 0xAB</expr>,
+      <expr>(<name>byte</name>) 0xCD</expr>, <expr>(<name>byte</name>) 0xDE</expr>,
+      <expr>(<name>byte</name>) 0x01</expr>, <expr>(<name>byte</name>) 0x02</expr>, <expr>(<name>byte</name>) 0x03</expr>, <expr>(<name>byte</name>) 0x04</expr>, <expr>(<name>byte</name>) 0x05</expr>, <expr>(<name>byte</name>) 0x06</expr>, <expr>(<name>byte</name>) 0x07</expr>, <expr>(<name>byte</name>) 0x08</expr>,
+      <expr>(<name>byte</name>) 0xAA</expr>, <expr>(<name>byte</name>) 0xBB</expr>, <expr>(<name>byte</name>) 0xCC</expr>, <expr>(<name>byte</name>) 0xDD</expr>, <expr>(<name>byte</name>) 0xEE</expr>,
+      <expr>(<name>byte</name>) 0xFF</expr>, <expr>(<name>byte</name>) 0xFF</expr>
+    }</block></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x12345678</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"a"</expr></argument>, <argument><expr><name>JBBPFieldInt</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>(<name>byte</name>) 0xAB</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"b"</expr></argument>, <argument><expr><name>JBBPFieldByte</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>(<name>short</name>) 0xCDDE</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"c"</expr></argument>, <argument><expr><name>JBBPFieldShort</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x0102030405060708L</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"d"</expr></argument>, <argument><expr><name>JBBPFieldLong</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsLong</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertArrayEquals</name><argument_list>(<argument><expr>new <name><name>byte</name><index>[]</index></name><block>{<expr>(<name>byte</name>) 0xAA</expr>, <expr>(<name>byte</name>) 0xBB</expr>, <expr>(<name>byte</name>) 0xCC</expr>, <expr>(<name>byte</name>) 0xDD</expr>, <expr>(<name>byte</name>) 0xEE</expr>,}</block></expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"e"</expr></argument>, <argument><expr><name>JBBPFieldArrayByte</name>.class</expr></argument>)</argument_list></call>.<call><name>getArray</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  }</block></function>
+
+  @<function><type><name>Test</name>
+  <specifier>public</specifier> <name>void</name></type> <name>testFieldsWithCustomNames_ExpressionInExtraFieldValue</name><parameter_list>()</parameter_list> <throws>throws <argument><expr><name>Exception</name></expr></argument></throws> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>AtomicInteger</name></type> <name>callCounter</name> =<init> <expr>new <call><name>AtomicInteger</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPCustomFieldTypeProcessor</name></type> <name>testProcessor</name> =<init> <expr>new <class><super><name>JBBPCustomFieldTypeProcessor</name></super><argument_list>()</argument_list> <block>{
+      <decl_stmt><decl><type><specifier>private</specifier> <specifier>final</specifier> <name>String</name><index>[]</index></type> <name>types</name> =<init> <expr>new <name><name>String</name><index>[]</index></name><block>{<expr>"some1"</expr>, <expr>"some2"</expr>, <expr>"some3"</expr>}</block></expr></init></decl>;</decl_stmt>
+
+      <function><type><specifier>public</specifier> <name>String</name><index>[]</index></type> <name>getCustomFieldTypes</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>.<name>types</name></expr>;</return>
+      }</block></function>
+
+      <function><type><specifier>public</specifier> <name>boolean</name></type> <name>isAllowed</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPFieldTypeParameterContainer</name></type> <name>fieldType</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldName</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>extraData</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>boolean</name></type> <name>isArray</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name><name>callCounter</name>.<name>incrementAndGet</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+
+        <expr_stmt><expr><call><name>assertNotNull</name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>type</name> =<init> <expr><call><name><name>fieldType</name>.<name>getTypeName</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some1"</expr></argument>)</argument_list></call> || <call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some2"</expr></argument>)</argument_list></call> || <call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some3"</expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <if>if <condition>(<expr><call><name><name>fieldName</name>.<name>equals</name></name><argument_list>(<argument><expr>"b"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"some1"</expr></argument>, <argument><expr><name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name><name>fieldName</name>.<name>equals</name></name><argument_list>(<argument><expr>"c"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"some2"</expr></argument>, <argument><expr><name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name><name>fieldName</name>.<name>equals</name></name><argument_list>(<argument><expr>"e"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>"some3"</expr></argument>, <argument><expr><name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some3"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertTrue</name><argument_list>(<argument><expr><name>isArray</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+          <expr_stmt><expr><call><name>assertFalse</name><argument_list>(<argument><expr><name>isArray</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></else></if>
+
+        <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>-1</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+        <return>return <expr><name>true</name></expr>;</return>
+      }</block></function>
+
+      <function><type><specifier>public</specifier> <name>JBBPAbstractField</name></type> <name>readCustomFieldType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPBitInputStream</name></type> <name>in</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPBitOrder</name></type> <name>bitOrder</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>parserFlags</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPFieldTypeParameterContainer</name></type> <name>customFieldTypeInfo</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>fieldName</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>extraData</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>boolean</name></type> <name>readWholeStream</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>int</name></type> <name>arrayLength</name></decl></param>)</parameter_list> <throws>throws <argument><expr><name>IOException</name></expr></argument></throws> <block>{
+        <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>type</name> =<init> <expr><call><name><name>customFieldTypeInfo</name>.<name>getTypeName</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some1"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x12345678 * 2</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr>new <call><name>JBBPFieldByte</name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr>(<name>byte</name>) <call><name><name>in</name>.<name>readByte</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some2"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x12345678 * 3</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr>new <call><name>JBBPFieldShort</name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr>(<name>short</name>) <call><name><name>in</name>.<name>readUnsignedShort</name></name><argument_list>(<argument><expr><call><name><name>customFieldTypeInfo</name>.<name>getByteOrder</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <if>if <condition>(<expr><call><name><name>type</name>.<name>equals</name></name><argument_list>(<argument><expr>"some3"</expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+          <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x12345678 * 4</expr></argument>, <argument><expr><name>extraData</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+          <return>return <expr>new <call><name>JBBPFieldArrayByte</name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr><call><name><name>in</name>.<name>readByteArray</name></name><argument_list>(<argument><expr><name>arrayLength</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        
+        <expr_stmt><expr><call><name>fail</name><argument_list>(<argument><expr>"Unexpected field "+<name>type</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>null</name></expr>;</return>
+      }</block></function>
+    }</block></class></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPParser</name></type> <name>parser</name> =<init> <expr><call><name><name>JBBPParser</name>.<name>prepare</name></name><argument_list>(<argument><expr>"int a; some1:(a*2) b; some2:(a*3) c; long d; some3:(a*4) [5] e;"</expr></argument>, <argument><expr><name>JBBPBitOrder</name>.<name>LSB0</name></expr></argument>, <argument><expr><name>testProcessor</name></expr></argument>, <argument><expr><name>JBBPParser</name>.<name>FLAG_SKIP_REMAINING_FIELDS_IF_EOF</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>3</expr></argument>, <argument><expr><call><name><name>callCounter</name>.<name>get</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPFieldStruct</name></type> <name>parsed</name> =<init> <expr><call><name><name>parser</name>.<name>parse</name></name><argument_list>(<argument><expr>new <name><name>byte</name><index>[]</index></name><block>{
+      <expr>(<name>byte</name>) 0x12</expr>, <expr>(<name>byte</name>) 0x34</expr>, <expr>(<name>byte</name>) 0x56</expr>, <expr>(<name>byte</name>) 0x78</expr>,
+      <expr>(<name>byte</name>) 0xAB</expr>,
+      <expr>(<name>byte</name>) 0xCD</expr>, <expr>(<name>byte</name>) 0xDE</expr>,
+      <expr>(<name>byte</name>) 0x01</expr>, <expr>(<name>byte</name>) 0x02</expr>, <expr>(<name>byte</name>) 0x03</expr>, <expr>(<name>byte</name>) 0x04</expr>, <expr>(<name>byte</name>) 0x05</expr>, <expr>(<name>byte</name>) 0x06</expr>, <expr>(<name>byte</name>) 0x07</expr>, <expr>(<name>byte</name>) 0x08</expr>,
+      <expr>(<name>byte</name>) 0xAA</expr>, <expr>(<name>byte</name>) 0xBB</expr>, <expr>(<name>byte</name>) 0xCC</expr>, <expr>(<name>byte</name>) 0xDD</expr>, <expr>(<name>byte</name>) 0xEE</expr>,
+      <expr>(<name>byte</name>) 0xFF</expr>, <expr>(<name>byte</name>) 0xFF</expr>
+    }</block></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x12345678</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"a"</expr></argument>, <argument><expr><name>JBBPFieldInt</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>(<name>byte</name>) 0xAB</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"b"</expr></argument>, <argument><expr><name>JBBPFieldByte</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>(<name>short</name>) 0xCDDE</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"c"</expr></argument>, <argument><expr><name>JBBPFieldShort</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertEquals</name><argument_list>(<argument><expr>0x0102030405060708L</expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"d"</expr></argument>, <argument><expr><name>JBBPFieldLong</name>.class</expr></argument>)</argument_list></call>.<call><name>getAsLong</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name>assertArrayEquals</name><argument_list>(<argument><expr>new <name><name>byte</name><index>[]</index></name><block>{<expr>(<name>byte</name>) 0xAA</expr>, <expr>(<name>byte</name>) 0xBB</expr>, <expr>(<name>byte</name>) 0xCC</expr>, <expr>(<name>byte</name>) 0xDD</expr>, <expr>(<name>byte</name>) 0xEE</expr>,}</block></expr></argument>, <argument><expr><call><name><name>parsed</name>.<name>findFieldForNameAndType</name></name><argument_list>(<argument><expr>"e"</expr></argument>, <argument><expr><name>JBBPFieldArrayByte</name>.class</expr></argument>)</argument_list></call>.<call><name>getArray</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  }</block></function>
+
+}</block></class>
+</unit>

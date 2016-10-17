@@ -1,0 +1,204 @@
+<IntraRuleBase>
+	<IntraRules>
+		<DeleteIntraRule id="rule1">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</DeleteIntraRule>
+		<DeleteIntraRule id="rule2">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteIntraRule>
+		<DeleteIntraRule id="rule3">
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteIntraRule>
+		<DeleteIntraRule id="rule4">
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</DeleteIntraRule>
+		<AddIntraRule id="rule5">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</AddIntraRule>
+		<AddIntraRule id="rule6">
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</AddIntraRule>
+		<AddIntraRule id="rule7">
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</AddIntraRule>
+		<AddIntraRule id="rule8">
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</AddIntraRule>
+		<EditIntraRule id="rule9">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule10">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UML_CLASS_DIAGRAM</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule11">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule12">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule13">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is potentially inconsistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule14">
+			<FineGrainedChangeType>Content</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Member</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is consistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule15">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>JAVA_SOURCE_CODE</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditIntraRule>
+		<EditIntraRule id="rule16">
+			<FineGrainedChangeType>Signature</FineGrainedChangeType>
+			<ChangedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ChangedEntity>
+			<ConnectedEntity>
+				<ArtefactType>UNIT_TEST</ArtefactType>
+				<FineGrainedElementType>Container</FineGrainedElementType>
+			</ConnectedEntity>
+			<IntraLinkType>Domain dependency</IntraLinkType>
+			<StateOfConsistency>Connected entity is inconsistent.</StateOfConsistency>
+		</EditIntraRule>
+	</IntraRules>
+</IntraRuleBase>

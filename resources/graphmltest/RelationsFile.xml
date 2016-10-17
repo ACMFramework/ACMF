@@ -1,0 +1,34 @@
+<Relations>
+	<Relation id="1_Inter">
+		<SourceNode>ut3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="2_Inter">
+		<SourceNode>ut3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitInputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="3_Inter">
+		<SourceNode>ut4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="4_Inter">
+		<SourceNode>ut4C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitInputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="5_Inter">
+		<SourceNode>ut5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitInputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="6_Inter">
+		<SourceNode>ut5C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="7_Inter">
+		<SourceNode>ut6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc10C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitInputStream.graphml</TargetNode>
+	</Relation>
+	<Relation id="8_Inter">
+		<SourceNode>ut6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\TestCases\io\BitIOCommonTest.graphml</SourceNode>
+		<TargetNode>sc6C:\Users\Ildi\Dropbox\PhD\SharedBackup\Evaluation\BinaryBlockParser\SourceCode\io\JBBPBitOutputStream.graphml</TargetNode>
+	</Relation>
+</Relations>

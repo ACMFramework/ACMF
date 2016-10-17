@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Ildi/Documents/hg4/hg4j_1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ildi/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.google.guava"/>
+			<attribute name="maven.artifactId" value="guava"/>
+			<attribute name="maven.version" value="19.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Ildi/Downloads/commons-configuration2-2.0-bin/commons-configuration2-2.0/commons-configuration2-2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ildi/Documents/weka-3-9-0/weka.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ildi/Documents/ODT_useThis/lib/odfdom.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

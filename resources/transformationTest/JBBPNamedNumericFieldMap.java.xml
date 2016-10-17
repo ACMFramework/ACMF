@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" language="Java" filename="JBBPNamedNumericFieldMap.java"><comment type="block">/* 
+ * Copyright 2014 Igor Maznitsa (http://www.igormaznitsa.com).
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */</comment>
+<package>package <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>;</package>
+
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>compiler</name>.<name>JBBPCompiledBlock</name>;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>compiler</name>.<name>JBBPNamedFieldInfo</name>;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>compiler</name>.<name>varlen</name>.<name>JBBPIntegerValueEvaluator</name>;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>exceptions</name>.*;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>model</name>.*;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>model</name>.<name>finder</name>.<name>JBBPFieldFinder</name>;</import>
+<import>import <name>com</name>.<name>igormaznitsa</name>.<name>jbbp</name>.<name>utils</name>.<name>JBBPUtils</name>;</import>
+<import>import <name>java</name>.<name>util</name>.*;</import>
+
+<comment type="javadoc">/**
+ * Implements a storage to keep named fields. it is not a thread-safe one
+ * @since 1.0
+ */</comment>
+<class><specifier>public</specifier> <specifier>final</specifier> class <name>JBBPNamedNumericFieldMap</name> <super><implements>implements <name>JBBPFieldFinder</name></implements></super> <block>{
+
+  <comment type="javadoc">/**
+   * Inside map to get numeric fields for their name field descriptors.
+   */</comment>
+  <decl_stmt><decl><type><specifier>private</specifier> <specifier>final</specifier> <name><name>Map</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name></type> <name>fieldMap</name></decl>;</decl_stmt>
+  <comment type="javadoc">/**
+   * Defined external value provider, it can be null.
+   */</comment>
+  <decl_stmt><decl><type><specifier>private</specifier> <specifier>final</specifier> <name>JBBPExternalValueProvider</name></type> <name>externalValueProvider</name></decl>;</decl_stmt>
+
+  <comment type="javadoc">/**
+   * Empty constructor which makes a map with null provider.
+   */</comment>
+  <constructor><specifier>public</specifier> <name>JBBPNamedNumericFieldMap</name><parameter_list>()</parameter_list> <block>{
+    <expr_stmt><expr><call><name>this</name><argument_list>(<argument><expr><name>null</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  }</block></constructor>
+
+  <comment type="javadoc">/**
+   * A Constructor.
+   *
+   * @param externalValueProvider an external value provider, it can be null
+   */</comment>
+  <constructor><specifier>public</specifier> <name>JBBPNamedNumericFieldMap</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPExternalValueProvider</name></type> <name>externalValueProvider</name></decl></param>)</parameter_list> <block>{
+    <expr_stmt><expr><name>this</name>.<name>fieldMap</name> = new <call><name><name>LinkedHashMap</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><name>this</name>.<name>externalValueProvider</name> = <name>externalValueProvider</name></expr>;</expr_stmt>
+  }</block></constructor>
+
+  <comment type="javadoc">/**
+   * Get the external value provider.
+   *
+   * @return the external value provider or null if it is undefined
+   */</comment>
+  <function><type><specifier>public</specifier> <name>JBBPExternalValueProvider</name></type> <name>getExternalValueProvider</name><parameter_list>()</parameter_list> <block>{
+    <return>return <expr><name>this</name>.<name>externalValueProvider</name></expr>;</return>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Get a numeric field for its field name info.
+   *
+   * @param namedField a field name info, it must not be null
+   * @return the found field or null if it is not found
+   */</comment>
+  <function><type><specifier>public</specifier> <name>JBBPNumericField</name></type> <name>get</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>namedField</name></decl></param>)</parameter_list> <block>{
+    <return>return <expr><call><name><name>this</name>.<name>fieldMap</name>.<name>get</name></name><argument_list>(<argument><expr><name>namedField</name></expr></argument>)</argument_list></call></expr>;</return>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Put a numeric field into map.
+   *
+   * @param field a field to be added into map or replace already exists one, it
+   * must not be null
+   * @throws NullPointerException if the field is null or if it is an anonymous
+   * field
+   */</comment>
+  <function><type><specifier>public</specifier> <name>void</name></type> <name>putField</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPNumericField</name></type> <name>field</name></decl></param>)</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>field</name></expr></argument>, <argument><expr>"Field must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>fieldName</name> =<init> <expr><call><name><name>field</name>.<name>getNameInfo</name></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr>"Field name info must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <expr_stmt><expr><call><name><name>this</name>.<name>fieldMap</name>.<name>put</name></name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>, <argument><expr><name>field</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Remove a field for its field name info descriptor.
+   *
+   * @param nameInfo the field name info, it must not be null
+   * @return removed numeric field or null if there was not any field for the info
+   */</comment>
+  <function><type><specifier>public</specifier> <name>JBBPNumericField</name></type> <name>remove</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>nameInfo</name></decl></param>)</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>nameInfo</name></expr></argument>, <argument><expr>"Name info must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <return>return <expr><call><name><name>this</name>.<name>fieldMap</name>.<name>remove</name></name><argument_list>(<argument><expr><name>nameInfo</name></expr></argument>)</argument_list></call></expr>;</return>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Find a registered field for its field offset in compiled script.
+   *
+   * @param offset the field offset
+   * @return found field or null if there is not any found for the offset
+   */</comment>
+  <function><type><specifier>public</specifier> <name>JBBPNumericField</name></type> <name>findForFieldOffset</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>int</name></type> <name>offset</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><name>JBBPNumericField</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+    <for>for (<init><decl><type><specifier>final</specifier> <name><name>Map</name>.<name><name>Entry</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name></name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>entrySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>f</name>.<name>getKey</name></name><argument_list>()</argument_list></call>.<call><name>getFieldOffsetInCompiledBlock</name><argument_list>()</argument_list></call> == <name>offset</name></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <argument_list>&lt;<argument><name>T</name> <extends>extends <name>JBBPAbstractField</name></extends></argument>&gt;</argument_list> <name>T</name></type> <name>findFirstFieldForType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name><name>Class</name><argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>fieldType</name></decl></param>)</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>, <argument><expr>"Type must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>T</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+    <for>for (<init><decl><type><specifier>final</specifier> <name>JBBPNumericField</name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>values</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>fieldType</name>.<name>isAssignableFrom</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getClass</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <call><name><name>fieldType</name>.<name>cast</name></name><argument_list>(<argument><expr><name>f</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <argument_list>&lt;<argument><name>T</name> <extends>extends <name>JBBPAbstractField</name></extends></argument>&gt;</argument_list> <name>T</name></type> <name>findLastFieldForType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name><name>Class</name><argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>fieldType</name></decl></param>)</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>, <argument><expr>"Type must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>T</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+    <for>for (<init><decl><type><specifier>final</specifier> <name>JBBPNumericField</name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>values</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><name>fieldType</name> == <call><name><name>f</name>.<name>getClass</name></name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <call><name><name>fieldType</name>.<name>cast</name></name><argument_list>(<argument><expr><name>f</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <argument_list>&lt;<argument><name>T</name> <extends>extends <name>JBBPAbstractField</name></extends></argument>&gt;</argument_list> <name>T</name></type> <name>findFieldForType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name><name>Class</name><argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>fieldType</name></decl></param>)</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>, <argument><expr>"Type must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>count</name> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>T</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+    <for>for (<init><decl><type><specifier>final</specifier> <name>JBBPNumericField</name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>values</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><name>fieldType</name> == <call><name><name>f</name>.<name>getClass</name></name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <call><name><name>fieldType</name>.<name>cast</name></name><argument_list>(<argument><expr><name>f</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>count</name>++</expr>;</expr_stmt>
+      }</block></then></if>
+    }</block></for>
+    <if>if <condition>(<expr><name>count</name> &gt; 1</expr>)</condition><then> <block>{
+      <throw>throw <expr>new <call><name>JBBPTooManyFieldsFoundException</name><argument_list>(<argument><expr><name>count</name></expr></argument>, <argument><expr>"Too many fields detected"</expr></argument>, <argument><expr><name>null</name></expr></argument>, <argument><expr><name>fieldType</name></expr></argument>)</argument_list></call></expr>;</throw>
+    }</block></then></if>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <argument_list>&lt;<argument><name>T</name> <extends>extends <name>JBBPAbstractField</name></extends></argument>&gt;</argument_list> <name>T</name></type> <name>findFieldForNameAndType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldName</name></decl></param>, <param><decl><type><specifier>final</specifier> <name><name>Class</name><argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>fieldType</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedName</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>, <argument><expr>"Field type must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>T</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+
+    <for>for (<init><decl><type><specifier>final</specifier> <name><name>Map</name>.<name><name>Entry</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name></name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>entrySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>normalizedName</name>.<name>equals</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getKey</name></name><argument_list>()</argument_list></call>.<call><name>getFieldName</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call> &amp;&amp; <call><name><name>fieldType</name>.<name>isAssignableFrom</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call>.<call><name>getClass</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <call><name><name>fieldType</name>.<name>cast</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <argument_list>&lt;<argument><name>T</name> <extends>extends <name>JBBPAbstractField</name></extends></argument>&gt;</argument_list> <name>T</name></type> <name>findFieldForPathAndType</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldPath</name></decl></param>, <param><decl><type><specifier>final</specifier> <name><name>Class</name><argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>fieldType</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedPath</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>fieldPath</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <expr_stmt><expr><call><name><name>JBBPUtils</name>.<name>assertNotNull</name></name><argument_list>(<argument><expr><name>fieldType</name></expr></argument>, <argument><expr>"Field type must not be null"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+
+    <decl_stmt><decl><type><name>T</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+
+    <for>for (<init><decl><type><specifier>final</specifier> <name><name>Map</name>.<name><name>Entry</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name></name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>entrySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>normalizedPath</name>.<name>equals</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getKey</name></name><argument_list>()</argument_list></call>.<call><name>getFieldPath</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call> &amp;&amp; <call><name><name>fieldType</name>.<name>isAssignableFrom</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call>.<call><name>getClass</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <call><name><name>fieldType</name>.<name>cast</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <name>JBBPAbstractField</name></type> <name>findFieldForName</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldName</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedName</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>JBBPAbstractField</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+
+    <for>for (<init><decl><type><specifier>final</specifier> <name><name>Map</name>.<name><name>Entry</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name></name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>entrySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>normalizedName</name>.<name>equals</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getKey</name></name><argument_list>()</argument_list></call>.<call><name>getFieldName</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = (<name>JBBPAbstractField</name>) <call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <name>JBBPAbstractField</name></type> <name>findFieldForPath</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldPath</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedPath</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>fieldPath</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>JBBPAbstractField</name></type> <name>result</name> =<init> <expr><name>null</name></expr></init></decl>;</decl_stmt>
+
+    <for>for (<init><decl><type><specifier>final</specifier> <name><name>Map</name>.<name><name>Entry</name><argument_list>&lt;<argument><name>JBBPNamedFieldInfo</name></argument>, <argument><name>JBBPNumericField</name></argument>&gt;</argument_list></name></name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>entrySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>normalizedPath</name>.<name>equals</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getKey</name></name><argument_list>()</argument_list></call>.<call><name>getFieldPath</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = (<name>JBBPAbstractField</name>) <call><name><name>f</name>.<name>getValue</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <name>boolean</name></type> <name>nameExists</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldName</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedName</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>fieldName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>boolean</name></type> <name>result</name> =<init> <expr><name>false</name></expr></init></decl>;</decl_stmt>
+
+    <for>for (<init><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>keySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>normalizedName</name>.<name>equals</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getFieldName</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <name>true</name></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <function><type><specifier>public</specifier> <name>boolean</name></type> <name>pathExists</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>fieldPath</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedPath</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>fieldPath</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>boolean</name></type> <name>result</name> =<init> <expr><name>false</name></expr></init></decl>;</decl_stmt>
+
+    <for>for (<init><decl><type><specifier>final</specifier> <name>JBBPNamedFieldInfo</name></type> <name>f</name> :<range> <expr><call><name><name>fieldMap</name>.<name>keySet</name></name><argument_list>()</argument_list></call></expr></range></decl></init>) <block>{
+      <if>if <condition>(<expr><call><name><name>normalizedPath</name>.<name>equals</name></name><argument_list>(<argument><expr><call><name><name>f</name>.<name>getFieldPath</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name>result</name> = <name>true</name></expr>;</expr_stmt>
+        <break>break;</break>
+      }</block></then></if>
+    }</block></for>
+    <return>return <expr><name>result</name></expr>;</return>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Clear the map.
+   */</comment>
+  <function><type><specifier>public</specifier> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list> <block>{
+    <expr_stmt><expr><call><name><name>this</name>.<name>fieldMap</name>.<name>clear</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Check that the map is empty.
+   *
+   * @return true if the map is empty, false otherwise
+   */</comment>
+  <function><type><specifier>public</specifier> <name>boolean</name></type> <name>isEmpty</name><parameter_list>()</parameter_list> <block>{
+    <return>return <expr><call><name><name>this</name>.<name>fieldMap</name>.<name>isEmpty</name></name><argument_list>()</argument_list></call></expr>;</return>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Get number of registered fields in the map.
+   *
+   * @return number of registered fields as integer
+   */</comment>
+  <function><type><specifier>public</specifier> <name>int</name></type> <name>size</name><parameter_list>()</parameter_list> <block>{
+    <return>return <expr><call><name><name>this</name>.<name>fieldMap</name>.<name>size</name></name><argument_list>()</argument_list></call></expr>;</return>
+  }</block></function>
+
+  <comment type="javadoc">/**
+   * Ask the registered external value provider for a field value.
+   *
+   * @param externalFieldName the name of a field, it must not be null
+   * @param compiledBlock the compiled block, it must not be null
+   * @param evaluator an evaluator which is calling the method, it can be null
+   * @return integer value for the field
+   * @throws JBBPException if there is not any external value provider
+   */</comment>
+  <function><type><specifier>public</specifier> <name>int</name></type> <name>getExternalFieldValue</name><parameter_list>(<param><decl><type><specifier>final</specifier> <name>String</name></type> <name>externalFieldName</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPCompiledBlock</name></type> <name>compiledBlock</name></decl></param>, <param><decl><type><specifier>final</specifier> <name>JBBPIntegerValueEvaluator</name></type> <name>evaluator</name></decl></param>)</parameter_list> <block>{
+    <decl_stmt><decl><type><specifier>final</specifier> <name>String</name></type> <name>normalizedName</name> =<init> <expr><call><name><name>JBBPUtils</name>.<name>normalizeFieldNameOrPath</name></name><argument_list>(<argument><expr><name>externalFieldName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>this</name>.<name>externalValueProvider</name> == <name>null</name></expr>)</condition><then> <block>{
+      <throw>throw <expr>new <call><name>JBBPEvalException</name><argument_list>(<argument><expr>"Request for '" + <name>externalFieldName</name> + "' but there is not any value provider"</expr></argument>, <argument><expr><name>evaluator</name></expr></argument>)</argument_list></call></expr>;</throw>
+    }</block></then>
+    <else>else <block>{
+      <return>return <expr><call><name><name>this</name>.<name>externalValueProvider</name>.<name>provideArraySize</name></name><argument_list>(<argument><expr><name>normalizedName</name></expr></argument>, <argument><expr><name>this</name></expr></argument>, <argument><expr><name>compiledBlock</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></else></if>
+  }</block></function>
+}</block></class>
+</unit>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml>
+<key attr.name="name" attr.type="string" for="node" id="d0"/>
+<key attr.name="visibility" attr.type="string" for="node" id="d1"/>
+<key attr.name="variableType" attr.type="string" for="node" id="d2"/>
+<key attr.name="content" attr.type="string" for="node" id="d3"/>
+<key attr.name="parameters" attr.type="string" for="node" id="d4"/>
+<key attr.name="returnType" attr.type="string" for="node" id="d5"/>
+<key attr.name="type" attr.type="string" for="node" id="d6"/>
+<key attr.name="relType" attr.type="string" for="edge" id="d7"/>
+<key attr.name="uniqueId" attr.type="string" for="node" id="d8"/>
+<key attr.name="implementsOrExtends" attr.type="string" for="node" id="d9"/>
+<graph edgedefault="undirected" id="SC">
+<node id="sc0C:\Users\Ildi\Dropbox\PhD\ACMF\BitIOCommonTest.graphml">
+<data key="d0">BitIOCommonTestMODIFIED</data>
+<data key="d1">MODIFIED</data>
+<data key="d6">class</data>
+<data key="d8">sc0C:\Users\Ildi\Dropbox\PhD\ACMF\BitIOCommonTest.graphml</data>
+<data key="d9"/>
+</node>
+<node id="sc1C:\Users\Ildi\Dropbox\PhD\ACMF\BitIOCommonTest.graphml">
+<data key="d0">rndMODIFIED</data>
+<data key="d1">MODIFIED</data>
+<data key="d2">MODIFIED</data>
+<data key="d6">Field</data>
+</node>
+<node id="sc3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Change detection\constraints\Example graphs\BitIOCommonTestBefore.graphml">
+<data key="d0">testWriteReadMODIFIED</data>
+<data key="d1">MODIFIED</data>
+<data key="d3">{
+    if (writenBits % 8 == 0) {
+      assertEquals(-1, in.read());
+	  MODIFIED
+    }
+  }</data>v10
+<data key="d5">MODIFIED</data>
+<data key="d4"/>
+<data key="d6">Method</data>
+<data key="d8">sc3C:\Users\Ildi\Dropbox\PhD\SharedBackup\Change detection\constraints\Example graphs\BitIOCommonTestBefore.graphml</data>
+</node>
+</graph>
+</graphml>

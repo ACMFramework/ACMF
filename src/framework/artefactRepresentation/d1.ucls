@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="framework.artefactRepresentation.Element" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/Element.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="161" x="316" y="500"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="framework.artefactRepresentation.ElementTypes" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/ElementTypes.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="369" width="153" x="82" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="framework.artefactRepresentation.Field" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/Field.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="208" x="907" y="1565"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="framework.artefactRepresentation.IElement" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/IElement.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="153" x="397" y="855"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="5" language="java" name="framework.artefactRepresentation.IField" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/IField.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="63" width="153" x="664" y="1920"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="framework.artefactRepresentation.IMethod" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/IMethod.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="153" x="471" y="1920"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="framework.artefactRepresentation.IObjectOrientedElement" 
+    project="PhDPrototype" file="/PhDPrototype/src/framework/artefactRepresentation/IObjectOrientedElement.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="159" x="391" y="1300"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="8" language="java" name="framework.artefactRepresentation.IRelation" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/IRelation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="153" x="517" y="500"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="9" language="java" name="framework.artefactRepresentation.ISpecificationElement" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/ISpecificationElement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="153" x="198" y="1300"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="framework.artefactRepresentation.ITypeComponent" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/ITypeComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="153" x="391" y="1565"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="framework.artefactRepresentation.Method" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/Method.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="283" x="584" y="1565"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="framework.artefactRepresentation.ObjectOrientedElement" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/ObjectOrientedElement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="264" x="590" y="855"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="framework.artefactRepresentation.Relation" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/Relation.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="423" width="242" x="316" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="framework.artefactRepresentation.SpecificationElement" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/SpecificationElement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="405" width="316" x="41" y="855"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="framework.artefactRepresentation.TypeComponent" project="PhDPrototype" 
+    file="/PhDPrototype/src/framework/artefactRepresentation/TypeComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="263" x="590" y="1300"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="16">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="18">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <generalization id="19">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="20">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <realization id="21">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="22">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="23">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <realization id="26">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="28">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="29" name="sourceElement"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="31">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="32">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="33" name="targetElement"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="35">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="36">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
