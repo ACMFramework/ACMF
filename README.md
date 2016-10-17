@@ -55,6 +55,6 @@ Edit Node id:sc0C:\Users\I\ACMF\SourceCode\ChatBot.graphml, Node type:class."*
 
 ##Similar Projects
 
-EMFTrace (https://sourceforge.net/projects/emftrace/)
-CLIME (http://cs.brown.edu/~spr/research/envclime.html)
-ArchTrace (https://github.com/gems-uff/archtrace)
+* [EMFTrace] (https://sourceforge.net/projects/emftrace/)
+* [CLIME] (http://cs.brown.edu/~spr/research/envclime.html)
+* [ArchTrace] (https://github.com/gems-uff/archtrace)
